@@ -1,12 +1,5 @@
 #!/bin/bash
-
-
 trap 'printf "\n";stop;exit 1' 2
-
-dev(){
-echo -e "HOlA MUNDO"
-}
-
 packages() {
 command -v php > /dev/null 2>&1 || { echo >&2 -e "$v[*]$b Installing PHP..."; pkg install php -y;}
 command -v curl > /dev/null 2>&1 || { echo >&2 -e "$v[*]$b Installing curl..."; pkg install curl -y;}
